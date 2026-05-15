@@ -217,16 +217,7 @@ const Compiler = ({ LessonId, language: fixedLanguage, initialCode = "", expecte
           <option value="html">HTML</option>
           <option value="css">CSS</option>
           <option value="js">JavaScript</option>
-          <option value="dsa-js">DSA (JavaScript)</option>
-          <option value="oop-js">OOP (JavaScript)</option>
           <option value="react">React (JSX)</option>
-          <option value="node">Node.js (server)</option>
-          <option value="c">C (server)</option>
-          <option value="cpp">C++ (server)</option>
-          <option value="python">Python (server)</option>
-          <option value="java">Java (server)</option>
-          <option value="dbms">DBMS/SQL (server)</option>
-          <option value="mongo">Mongo (server)</option>
         </select>
       )}
 
