@@ -36,26 +36,39 @@ const forgotPasswordLogic = async (req, res, next) => {
       return res.status(500).json({ message: "Email service not configured properly" });
     }
 
-    const resetLink = `http://localhost:5174/ResetPassword?token=${token}`; // Replace with actual frontend port
-
-    const emailResponse = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        "Authorization": `Bearer ${resendApiKey}`,
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        from: "Acme <onboarding@resend.dev>",
-        to: [Email],
-        subject: "Reset your password",
-        html: `<p>Click here to reset your password: <a href="${resetLink}">${resetLink}</a></p><p>This link expires in 15 minutes.</p>`
-      })
-    });
+    // Use environment variable if it exists, otherwise fallback to the live Netlify site
+    const clientUrl = process.env.CLIENT_URL || "https://codevibeforyou.netlify.app";
+    const resetLink = `${clientUrl}/ResetPassword?token=${token}`;
+    let emailResponse;
+    try {
+      emailResponse = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          "Authorization": `Bearer ${resendApiKey}`,
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          from: "Acme <onboarding@resend.dev>",
+          to: [Email],
+          subject: "Reset your password",
+          html: `<p>Click here to reset your password: <a href="${resetLink}">${resetLink}</a></p><p>This link expires in 15 minutes.</p>`
+        })
+      });
+    } catch (fetchError) {
+      console.error("Fetch implementation error:", fetchError);
+      return res.status(500).json({ 
+        message: "Internal Server Error during email sending", 
+        error: fetchError.message + " (Check Node.js version, requires 18+ for native fetch)" 
+      });
+    }
 
     if (!emailResponse.ok) {
       const errorData = await emailResponse.json();
       console.error("Resend API error:", errorData);
-      return res.status(500).json({ message: "Failed to send reset email" });
+      return res.status(500).json({ 
+        message: "Failed to send reset email", 
+        error: errorData.message || "Unknown Resend Error" 
+      });
     }
 
     return res.status(200).json({ success: true, message: "If an account exists, you'll receive a reset link." });
