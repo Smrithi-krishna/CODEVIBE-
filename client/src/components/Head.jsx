@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { FaSignInAlt, FaUserPlus, FaTachometerAlt, FaGamepad, FaSearch, FaTimes } from "react-icons/fa";
 import logo from "../assets/websitelogo.png";
 
@@ -24,6 +24,8 @@ const Head = () => {
   const inputRef = useRef(null);
   const wrapperRef = useRef(null);
   const navigate = useNavigate();
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -127,17 +129,20 @@ const clearSearch = () => {
       </nav>
 
       {/* Row 2: Title */}
-      <div className="header-title-row">
-        <h1>
-          <FaGamepad className="title-icon" />
-          CodeVibe
-          <FaGamepad className="title-icon" />
-        </h1>
-        <p className="header-tagline">Learn &bull; Practice &bull; Master &bull; Code &mdash; Level Up Your Programming Skills</p>
-      </div>
+      {isHomePage && (
+        <div className="header-title-row">
+          <h1>
+            <FaGamepad className="title-icon" />
+            CodeVibe
+            <FaGamepad className="title-icon" />
+          </h1>
+          <p className="header-tagline">Learn &bull; Practice &bull; Master &bull; Code &mdash; Level Up Your Programming Skills</p>
+        </div>
+      )}
 
       {/* Row 3: Search Bar */}
-      <div className="header-search-row" ref={wrapperRef}>
+      {isHomePage && (
+        <div className="header-search-row" ref={wrapperRef}>
         <form
           className={`search-form ${focused ? "search-form--focused" : ""}`}
           onSubmit={handleSubmit}
@@ -202,6 +207,7 @@ const clearSearch = () => {
           )}
         </form>
       </div>
+      )}
     </header>
   );
 };
