@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from 'react-router-dom';
+import API_BASE_URL from "../config/api";
 import forgotPic from "../assets/forgotPassword.png"
 
 const ForgotPassword = () => {
@@ -14,14 +15,9 @@ const ForgotPassword = () => {
     setLoading(true);
     setResponseMsg("");
     try {
-      const backendUrl = (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1" || window.location.hostname === "::1" || window.location.hostname.startsWith("192.168."))
-        ? "http://localhost:5002" 
-        : "https://codevibe-3.onrender.com";
-      
-      console.log("Selected Backend URL:", backendUrl);
-      console.log("Current Hostname:", window.location.hostname);
+      console.log("Using Backend URL:", API_BASE_URL);
         
-      const res = await axios.post(`${backendUrl}/api/auth/forgot-password`, {
+      const res = await axios.post(`${API_BASE_URL}/api/auth/forgot-password`, {
         Email: email,
       });
       setResponseMsg(res.data.message);
@@ -36,11 +32,11 @@ const ForgotPassword = () => {
     <section className="login-section">
      <div className="login-container">
        <div className="login-image">
-        <img src={forgotPic} alt="Forgot image" />
+        <img src={forgotPic} alt="Forgot Password" />
       </div>
       <div className="login-card">
           <form className="login-form" onSubmit={handleSubmit}>
-            <h1>Forgot Your Password</h1>
+            <h1>Forgot Your Password?</h1>
             
             <div style={{ backgroundColor: "rgba(255, 77, 109, 0.1)", border: "1px solid var(--primary-red)", padding: "10px", borderRadius: "8px", marginBottom: "15px", fontSize: "0.85rem", color: "white" }}>
               <strong style={{color: "var(--primary-red)"}}>Note:</strong> Reset emails are sent via Nodemailer. Ensure EMAIL_USER and EMAIL_PASS are configured.

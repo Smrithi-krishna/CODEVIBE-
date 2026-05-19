@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-
+import API_BASE_URL from '../config/api';
 
 const CssLesson = () => {
   const [completed, setCompleted] = useState([]);
@@ -10,7 +10,7 @@ const CssLesson = () => {
   useEffect(() => {
     const email = localStorage.getItem('userEmail');
     if (!email) return;
-    axios.get(`http://localhost:5002/api/progress/${email}`)
+    axios.get(`${API_BASE_URL}/api/progress/${email}`)
       .then(res => setCompleted(res.data.completedLessons || []))
       .catch(err => console.error(err));
   }, []);
@@ -28,7 +28,7 @@ const CssLesson = () => {
         color: 'white'
       }}
     >
-      <h2>CSS LESSON'S</h2>
+      <h2>CSS LESSONS</h2>
 
       <div style={{ display: 'grid', gap: '12px', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))' }}>
         <Link to="/CssLesson1" className="course-box">

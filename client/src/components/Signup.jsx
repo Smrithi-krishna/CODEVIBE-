@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
+import API_BASE_URL from "../config/api";
 import registerImage from "../assets/registerImage.png";
 
 const SignUp = () => {
@@ -18,11 +19,7 @@ const SignUp = () => {
     setLoading(true);
 
     try {
-      const backendUrl = (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1" || window.location.hostname === "::1" || window.location.hostname.startsWith("192.168."))
-        ? "http://localhost:5002" 
-        : "https://codevibe-3.onrender.com";
-
-      const response = await axios.post(`${backendUrl}/api/auth/register`, {
+      const response = await axios.post(`${API_BASE_URL}/api/auth/register`, {
         username,
         Email: email,   // ✅ lowercase, same as Dashboard
         password,
@@ -50,11 +47,11 @@ const SignUp = () => {
     <section className='login-section'>
       <div className="login-container">
         <div className="login-image">
-          <img src={registerImage} className='registerImage' alt="Register image" />
+          <img src={registerImage} className='registerImage' alt="Register" />
         </div>
         <div className="login-card">
           <form className="login-form" onSubmit={handleSubmit}>
-            <h1>Join Us Today ! </h1>
+            <h1>Join Us Today!</h1>
 
             <label>USERNAME:</label>
             <input
@@ -96,7 +93,7 @@ const SignUp = () => {
               required
             />
             <p style={{ fontSize: "0.8rem", color: "var(--text-secondary)", marginTop: "-10px", marginBottom: "15px", textAlign: "left" }}>
-              *Password must be at least 6 characters long
+              *Password must be at least 6 characters long.
             </p>
 
             <button type="submit" disabled={loading}>
