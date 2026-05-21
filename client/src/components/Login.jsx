@@ -30,6 +30,7 @@ const Login = () => {
       setResponseMsg(response.data.message);
 
       if (response.data.success) {
+        localStorage.setItem("userEmail", response.data.user.email || response.data.user.Email || "");
         login(response.data.user, response.data.token);
         navigate(from, { replace: true });
       }

@@ -12,9 +12,12 @@ const Dashboard = () => {
     navigate("/Login");
   };
 
+  // Safely navigates to the detailed course progress report page by defensively
+  // resolving potential casing mismatches (email vs. Email) on the active user object.
   const handleViewReport = (course) => {
     // yaha course select karke report page pe bhejenge
-    navigate(`/report/${user.email}?course=${course}`);
+    const email = user?.email || user?.Email || "";
+    navigate(`/report/${email}?course=${course}`);
   };
 
   if (!user) {
@@ -65,7 +68,7 @@ const Dashboard = () => {
 
       <div className="dashboard-card" style={{ color: "black", width: "100%", maxWidth: "600px" }}>
         <p><strong>👤 Username:</strong> {user.username}</p>
-        <p><strong>📧 Email:</strong> {user.email}</p>
+        <p><strong>📧 Email:</strong> {user.email || user.Email}</p>
         <p><strong>🏫 College:</strong> {user.college}</p>
         <p><strong>🎓 Year:</strong> {user.year}</p>
       </div>

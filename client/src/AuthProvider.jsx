@@ -37,12 +37,14 @@ export const AuthProvider = ({ children }) => {
     if (!userData || !token) return;
     localStorage.setItem("authToken", token);
     localStorage.setItem("user", JSON.stringify(userData));
+    localStorage.setItem("userEmail", userData.email || userData.Email || "");
     setAuthState({ user: userData, token });
   };
 
   const logout = () => {
     localStorage.removeItem("authToken");
     localStorage.removeItem("user");
+    localStorage.removeItem("userEmail");
     setAuthState({ user: null, token: null });
   };
 
