@@ -1,3 +1,4 @@
+import API_BASE_URL from '../config/api';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
@@ -24,7 +25,7 @@ const DSALesson10 = () => {
     }
 
     if (email !== 'guest') {
-      axios.get(`http://localhost:5002/api/progress/${email}`)
+      axios.get(`${API_BASE_URL}/api/progress/${email}`)
         .then(res => {
           const completedFromBackend = res.data?.completedLessons || [];
           let hasUpdates = false;
@@ -51,7 +52,7 @@ const DSALesson10 = () => {
       localStorage.setItem(`dsaPractice_${email}`, JSON.stringify(updated));
 
       if (updated[problemId]) {
-        axios.post(`http://localhost:5002/api/lesson/${problemId}/complete`, { email, score: 100 })
+        axios.post(`${API_BASE_URL}/api/lesson/${problemId}/complete`, { email, score: 100 })
           .catch(err => console.error("Save practice progress error:", err));
       }
 
