@@ -2,7 +2,7 @@
 
 This leaderboard is generated automatically for `Smrithi-krishna/CODEVIBE-` by GitHub Actions.
 
-Last updated: 2026-06-16
+Last updated: 2026-06-17
 
 ## Scoring
 
@@ -28,7 +28,7 @@ Last updated: 2026-06-16
 | 12 | [@pratiyushraj007-Dev](https://github.com/pratiyushraj007-Dev) | 6 | 3 | 0 | 0 |
 | 13 | [@shreyamevada6](https://github.com/shreyamevada6) | 6 | 3 | 0 | 0 |
 | 14 | [@Swetha-Varma-K](https://github.com/Swetha-Varma-K) | 6 | 3 | 0 | 0 |
-| 15 | [@divyagsharma2006-blip](https://github.com/divyagsharma2006-blip) | 4 | 2 | 0 | 0 |
+| 15 | [@divyaa404](https://github.com/divyaa404) | 4 | 2 | 0 | 0 |
 | 16 | [@namrarafique93-del](https://github.com/namrarafique93-del) | 4 | 2 | 0 | 0 |
 | 17 | [@Samirahs08](https://github.com/Samirahs08) | 4 | 2 | 0 | 0 |
 | 18 | [@suryagkp2007-cmyk](https://github.com/suryagkp2007-cmyk) | 4 | 2 | 0 | 0 |
