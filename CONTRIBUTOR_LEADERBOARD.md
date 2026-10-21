@@ -2,7 +2,7 @@
 
 This leaderboard is generated automatically for `Smrithi-krishna/CODEVIBE-` by GitHub Actions.
 
-Last updated: 2026-10-20
+Last updated: 2026-10-21
 
 ## Scoring
 
@@ -29,17 +29,18 @@ Last updated: 2026-10-20
 | 13 | [@shreyamevada6](https://github.com/shreyamevada6) | 6 | 3 | 0 | 0 |
 | 14 | [@Swetha-Varma-K](https://github.com/Swetha-Varma-K) | 6 | 3 | 0 | 0 |
 | 15 | [@divyaa404](https://github.com/divyaa404) | 4 | 2 | 0 | 0 |
-| 16 | [@namrarafique93-del](https://github.com/namrarafique93-del) | 4 | 2 | 0 | 0 |
-| 17 | [@Samirahs08](https://github.com/Samirahs08) | 4 | 2 | 0 | 0 |
-| 18 | [@suryagkp2007-cmyk](https://github.com/suryagkp2007-cmyk) | 4 | 2 | 0 | 0 |
-| 19 | [@theblag](https://github.com/theblag) | 4 | 2 | 0 | 0 |
-| 20 | [@adityavikram-01](https://github.com/adityavikram-01) | 2 | 1 | 0 | 0 |
-| 21 | [@chinmaymohite3036](https://github.com/chinmaymohite3036) | 2 | 1 | 0 | 0 |
-| 22 | [@JANHAVI40](https://github.com/JANHAVI40) | 2 | 1 | 0 | 0 |
-| 23 | [@Mudita-Singh](https://github.com/Mudita-Singh) | 2 | 1 | 0 | 0 |
-| 24 | [@PeyalaAnandanaidu](https://github.com/PeyalaAnandanaidu) | 2 | 1 | 0 | 0 |
-| 25 | [@ravishankar-03](https://github.com/ravishankar-03) | 2 | 1 | 0 | 0 |
-| 26 | [@RehanAhmad25](https://github.com/RehanAhmad25) | 2 | 1 | 0 | 0 |
-| 27 | [@Shashankpatilrcr](https://github.com/Shashankpatilrcr) | 2 | 1 | 0 | 0 |
-| 28 | [@Tech4Aditya](https://github.com/Tech4Aditya) | 2 | 1 | 0 | 0 |
-| 29 | [@tejaswibellapu](https://github.com/tejaswibellapu) | 2 | 1 | 0 | 0 |
+| 16 | [@divyagsharma1415-cpu](https://github.com/divyagsharma1415-cpu) | 4 | 2 | 0 | 0 |
+| 17 | [@namrarafique93-del](https://github.com/namrarafique93-del) | 4 | 2 | 0 | 0 |
+| 18 | [@Samirahs08](https://github.com/Samirahs08) | 4 | 2 | 0 | 0 |
+| 19 | [@suryagkp2007-cmyk](https://github.com/suryagkp2007-cmyk) | 4 | 2 | 0 | 0 |
+| 20 | [@theblag](https://github.com/theblag) | 4 | 2 | 0 | 0 |
+| 21 | [@adityavikram-01](https://github.com/adityavikram-01) | 2 | 1 | 0 | 0 |
+| 22 | [@chinmaymohite3036](https://github.com/chinmaymohite3036) | 2 | 1 | 0 | 0 |
+| 23 | [@JANHAVI40](https://github.com/JANHAVI40) | 2 | 1 | 0 | 0 |
+| 24 | [@Mudita-Singh](https://github.com/Mudita-Singh) | 2 | 1 | 0 | 0 |
+| 25 | [@PeyalaAnandanaidu](https://github.com/PeyalaAnandanaidu) | 2 | 1 | 0 | 0 |
+| 26 | [@ravishankar-03](https://github.com/ravishankar-03) | 2 | 1 | 0 | 0 |
+| 27 | [@RehanAhmad25](https://github.com/RehanAhmad25) | 2 | 1 | 0 | 0 |
+| 28 | [@Shashankpatilrcr](https://github.com/Shashankpatilrcr) | 2 | 1 | 0 | 0 |
+| 29 | [@Tech4Aditya](https://github.com/Tech4Aditya) | 2 | 1 | 0 | 0 |
+| 30 | [@tejaswibellapu](https://github.com/tejaswibellapu) | 2 | 1 | 0 | 0 |
